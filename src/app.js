@@ -1,22 +1,20 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
   dialect: 'sqlite',
   operatorsAliases: false,
-
   pool: {
     max: 5,
     min: 0,
     acquire: 30000,
     idle: 10000
   },
-  storage: 'recipes.db'
+  storage: '../recipes.db'
 });
 
 const createError = require('http-errors');
 const express = require('express');
 
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes');
 const usersRouter = require('./routes/users');
 
 const app = express();
