@@ -12,6 +12,7 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "debug": "^4.3.2"
+    "debug": "^4.3.2",
+    "prettier": "2.4.1"
   }
 }
